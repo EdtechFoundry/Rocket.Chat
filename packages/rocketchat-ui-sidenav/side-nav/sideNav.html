@@ -1,8 +1,5 @@
 <template name="sideNav">
 	<aside class="side-nav" role="navigation">
-		<header class="header">
-			{{> accountBox }}
-		</header>
 		{{#if currentUser}}
 			<div class="unread-rooms top-unread-rooms hidden">
 				{{_ "More_unreads"}} <i class="icon-up-big"></i>
@@ -47,5 +44,9 @@
 			</div>
 			<span class="arrow bottom"></span>
 		{{/if}}
+
+        <footer class="footer">
+			{{> accountBox }}
+        </footer>
 	</aside>
 </template>
