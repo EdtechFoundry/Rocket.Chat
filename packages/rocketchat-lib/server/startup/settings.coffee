@@ -84,7 +84,7 @@ RocketChat.settings.addGroup 'OAuth', ->
 RocketChat.settings.addGroup 'General', ->
 
 	@add 'Site_Url', __meteor_runtime_config__?.ROOT_URL, { type: 'string', i18nDescription: 'Site_Url_Description', public: true }
-	@add 'Site_Name', 'Rocket.Chat', { type: 'string', public: true }
+	@add 'Site_Name', 'Groovy', { type: 'string', public: true }
 	@add 'Language', '', { type: 'language', public: true }
 	@add 'Allow_Invalid_SelfSigned_Certs', false, { type: 'boolean' }
 	@add 'Disable_Favorite_Rooms', false, { type: 'boolean' }
@@ -110,8 +110,8 @@ RocketChat.settings.addGroup 'SMTP', ->
 	@add 'SMTP_Test_Button', 'sendSMTPTestEmail', { type: 'action', actionText: 'Send_a_test_mail_to_my_user' }
 
 	@section 'Invitation', ->
-		@add 'Invitation_Subject', 'You have been invited to Rocket.Chat', { type: 'string' }
-		@add 'Invitation_HTML', '<h2>You have been invited to <h1>Rocket.Chat</h1></h2><p>Go to ' + __meteor_runtime_config__?.ROOT_URL + ' and try the best open source chat solution available today!</p>', { type: 'string', multiline: true }
+		@add 'Invitation_Subject', 'You have been invited to Groovy', { type: 'string' }
+		@add 'Invitation_HTML', '<h2>You have been invited to <h1>Groovy</h1></h2><p>Go to ' + __meteor_runtime_config__?.ROOT_URL + ' and try the best open source chat solution available today!</p>', { type: 'string', multiline: true }
 		@add 'Accounts_Enrollment_Email',  '', { type: 'string', multiline: true }
 
 
@@ -166,17 +166,17 @@ RocketChat.settings.addGroup 'Layout', ->
 
 	@section 'Content', ->
 		@add 'Layout_Home_Title', 'Home', { type: 'string', public: true }
-		@add 'Layout_Home_Body', 'Welcome to Rocket.Chat <br> Go to APP SETTINGS -> Layout to customize this intro.', { type: 'code', code: 'text/html', multiline: true, public: true }
+		@add 'Layout_Home_Body', 'Welcome to Groovy <br> Go to APP SETTINGS -> Layout to customize this intro.', { type: 'code', code: 'text/html', multiline: true, public: true }
 		@add 'Layout_Terms_of_Service', 'Terms of Service <br> Go to APP SETTINGS -> Layout to customize this page.', { type: 'code', code: 'text/html', multiline: true, public: true }
 		@add 'Layout_Privacy_Policy', 'Privacy Policy <br> Go to APP SETTINGS -> Layout to customize this page.', { type: 'code', code: 'text/html', multiline: true, public: true }
-		@add 'Layout_Sidenav_Footer', '<div><a href="https://github.com/RocketChat/Rocket.Chat" class="logo" target="_blank"> <img src="images/logo/logo.svg?v=3" /></a><div class="github-tagline"><span class="icon-pencil" style="color: #994C00"></span> with <span class="icon-heart" style="color: red"></span> on <span class="icon-github-circled"></span></div></div>', { type: 'code', code: 'text/html', public: true, i18nDescription: 'Layout_Sidenav_Footer_description' }
+		@add 'Layout_Sidenav_Footer', '<div><a href="" class="logo"> <img src="images/logo/logo.svg?v=3" /></a></div>', { type: 'code', code: 'text/html', public: true, i18nDescription: 'Layout_Sidenav_Footer_description' }
 
 	@section 'Custom Scripts', ->
 		@add 'Custom_Script_Logged_Out', '//Add your script', { type: 'code', multiline: true, public: true }
 		@add 'Custom_Script_Logged_In', '//Add your script', { type: 'code', multiline: true, public: true }
 
 	@section 'Login', ->
-		@add 'Layout_Login_Terms', 'By proceeding to create your account and use Rocket.Chat, you are agreeing to our <a href="/terms-of-service">Terms of Service</a> and <a href="/privacy-policy">Privacy Policy</a>. If you do not agree, you cannot use Rocket.Chat.', { type: 'string', multiline: true, public: true }
+		@add 'Layout_Login_Terms', 'By proceeding to create your account and use Groovy, you are agreeing to our <a href="/terms-of-service">Terms of Service</a> and <a href="/privacy-policy">Privacy Policy</a>. If you do not agree, you cannot use Groovy.', { type: 'string', multiline: true, public: true }
 
 
 RocketChat.settings.addGroup 'Logs', ->
