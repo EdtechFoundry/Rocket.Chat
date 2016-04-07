@@ -7,7 +7,7 @@ RocketChat.roomTypes.add 'c', 10,
 	icon: 'icon-hash'
 	route:
 		name: 'channel'
-		path: '/channel/:name'
+		path: '/topics/:name'
 		action: (params, queryParams) ->
 			Session.set 'showUserInfo'
 			openRoom 'c', params.name
@@ -17,22 +17,7 @@ RocketChat.roomTypes.add 'c', 10,
 	condition: ->
 		return RocketChat.authz.hasAllPermission 'view-c-room'
 
-RocketChat.roomTypes.add 'd', 20,
-	template: 'directMessages'
-	icon: 'icon-at'
-	route:
-		name: 'direct'
-		path: '/direct/:username'
-		action: (params, queryParams) ->
-			Session.set 'showUserInfo', params.username
-			openRoom 'd', params.username
-			RocketChat.TabBar.showGroup 'directmessage'
-		link: (sub) ->
-			return { username: sub.name }
-	condition: ->
-		return RocketChat.authz.hasAllPermission 'view-d-room'
-
-RocketChat.roomTypes.add 'p', 30,
+RocketChat.roomTypes.add 'p', 20,
 	template: 'privateGroups'
 	icon: 'icon-lock'
 	route:
@@ -46,3 +31,18 @@ RocketChat.roomTypes.add 'p', 30,
 			return { name: sub.name }
 	condition: ->
 		return RocketChat.authz.hasAllPermission 'view-p-room'
+
+RocketChat.roomTypes.add 'd', 30,
+	template: 'directMessages'
+	icon: 'icon-at'
+	route:
+		name: 'direct'
+		path: '/direct/:username'
+		action: (params, queryParams) ->
+			Session.set 'showUserInfo', params.username
+			openRoom 'd', params.username
+			RocketChat.TabBar.showGroup 'directmessage'
+		link: (sub) ->
+			return { username: sub.name }
+	condition: ->
+		return RocketChat.authz.hasAllPermission 'view-d-room'
